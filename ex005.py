@@ -5,7 +5,7 @@ def prime(num):
     if num <= 1: #se o número for menor ou igual a 1 ele retorna falso
         return False
     #testa todos os números de 2 até a raiz quadrada de num, para verificar se ele possui um divisor exato
-    for i in range(2, int(num ** 0.5) + 1): #ele vai começar o loop em 2, pois todo número é divisivel por 1
+    for i in range(2, num-1): #ele vai começar o loop em 2, e vai até num - 1
         if num % i == 0:
             #se o numero for divisivel por i então ele não é primo
             return False
