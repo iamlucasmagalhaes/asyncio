@@ -15,16 +15,16 @@ async def task(id):
 async def main():
     print('Aplicação iniciada')
     
-    #cria uma lista de tarefas
+    # Cria uma lista de tarefas
     tasks = []
     
-    #cria 30 tarefas
+    # Cria 30 tarefas
     for i in range(1, 31):
         task = asyncio.create_task(task(i))
         tasks.append(task)
     
-    #espera todas as tarefas terminarem
+    # Espera todas as tarefas terminarem
     await asyncio.gather(*tasks)
 
-#executa a função main
+# Executa a função main
 asyncio.run(main())
