@@ -20,8 +20,8 @@ async def main():
     
     #cria 30 tarefas
     for i in range(1, 31):
-        task = asyncio.create_task(task(i))
-        tasks.append(task)
+        task_obj = asyncio.create_task(task(i))
+        tasks.append(task_obj)
     
     #espera todas as tarefas terminarem
     await asyncio.gather(*tasks)
